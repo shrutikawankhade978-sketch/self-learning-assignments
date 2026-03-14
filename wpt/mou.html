@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Heading Hide & Mouse Position</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $("h1,h2,h3,h4,h5,h6").click(function(){
+    $(this).hide();
+    });
+
+ $(document).mousemove(function(){
+    $('#position').text(
+        "left:"+ event.pageX+ ",Top:"+ event.pageY
+    );
+ });
+  });
+  </script>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>heading 3</h3>
+
+    <p id="position">Move the mouse to see position</p>
+  </body>
+</html>   

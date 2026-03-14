@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get Single Element using jQuery</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $("button").click(function(){
+        var element = $("p").eq(2).text();
+        
+        alert("Selected Element: " + element);
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Third Paragraph</p>
+
+<button>Get Element</button>
+
+</body>
+</html>

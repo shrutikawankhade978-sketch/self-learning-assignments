@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click vs Double Click</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    var timer;
+
+    $("*").click(function(){
+        timer = setTimeout(function(){
+            alert("Element clicked");
+        }, 250);
+    });
+
+    $("*").dblclick(function(){
+        clearTimeout(timer);
+        alert("Element double clicked");
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<h2>jQuery Example</h2>
+<p>Try clicking and double clicking.</p>
+<button>Button</button>
+
+</body>
+</html>
